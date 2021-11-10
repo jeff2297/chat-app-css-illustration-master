@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | [Challenge Name Here]</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    .chat-container {
+      width: 375px;
+      font-family: 'Rubik', sans-serif;
+    }
+
+    .chatter {
+      background-image: linear-gradient(to right, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+      color: white;
+      height: 80px;
+      border-radius: 25px 25px 5px 5px;
+    }
+
+    .chatter-image {
+      display: flex;
+      position: absolute;
+      left: 75px;
+      top: 25px;
+    }
+
+    #previous {
+      display: flex;
+      position: absolute;
+      left: 55px;
+      top: 40px;
+
+    }
+
+    .chatter-description {
+      display: flex;
+      position: absolute;
+      left: 130px;
+      top: 30px;
+      font-size: 16px;
+    }
+
+    .chatter-status {
+      display: flex;
+      position: absolute;
+      line-height: 15px;
+      width: 120px;
+      left: 1px;
+      top: 20px;
+      font-size: 12px;
+      color: hsl(276, 100%, 81%)
+    }
+
+    .chat-box {
+      background-color: hsl(270, 20%, 96%);
+      height: 650px;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+
+    .chatter-chat {
+      display: flex;
+      position: relative;
+      padding: 10px;
+      width: 60%;
+      left: 5px;
+      background-color: hsl(277, 68%, 94%);
+      color: hsl(276, 55%, 52%);
+      opacity: 0.8;
+      font-size: 16px;
+      border-radius: 15px 15px 10px;
+      margin-top: 10px;
+    }
+
+    .user-image {
+      display: flex;
+      position: relative;
+      left: 100px;
+      top: 10px;
+      margin-right: 20px;
+    }
+
+    .user-chat {
+      display: flex;
+      position: relative;
+      padding: 5px;
+      justify-content: right;
+      width: 50%;
+      left: 150px;
+      color: hsl(271, 15%, 43%);
+      font-size: 16px;
+      background-color: white;
+      padding: 12px;
+      border-radius: 15px 15px 10px;
+      margin-top: 10px;
+    }
+
+    #second-user-chat {
+      display: flex;
+      position: relative;
+      justify-content: center;
+      left: 190px;
+      width: 150px;
+    }
+
+    .product-description {
+      background-image: linear-gradient(to left, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+      color: white;
+      border-radius: 20px 20px 20px 10px;
+      padding: 5px;
+      width: 70%;
+      margin-top: 10px;
+      justify-items: center;
+      line-height: 20px;
+      text-align: left;
+      
+    }
+
+    .prices {
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      display: flex;
+      position: relative;
+      left: 12rem;
+      bottom: 20px; 
+    }
+
+    #radio {
+      text-align: center;
+    }
+
+    input {
+      display: flex;
+      position: relative;
+      top: 16px;
+      background-color: linear-gradient(to left, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+      outline-color: hsl(289, 100%, 72%);
+    }
+
+    label {
+      display: flex;
+      position: relative;
+      left: 20px;
+    }
+
+    .user-type-box {
+      width: 100%;
+      height: 60px;
+      border-radius: 15px 15px 10px;
+      background-color: rgb(255, 255, 255);
+      color:gray;
+      display: flex;
+      position: relative;
+      top: 10px;
+      border: none;
+      border-radius: 40px;
+      text-align: center;
+      justify-content: center;
+     
+    }
+
+    .user-type-box label {
+      display: flex;
+      position: relative;
+      top: 25px;
+      left: -80px
+    }
+
+    #user-submit-button {
+      background: hsl(240, 100%, 100%);
+      border-radius: 50px;
+      display: block;
+      position: relative;
+      left: 80px;
+      top: 15px;
+    }
+    
+   
+
+  </style>
+</head>
+
+<body>
+  <div class="chat-container">
+    <div class="chatter">
+      <img class="chatter-image" src="./images/avatar.jpg"
+        style="width: 40px; border-radius: 40px; border: 1px solid white" />
+      <img class="chatter-image" id="previous" src="./images/icon-previous.svg" />
+      <div class="chatter-description">
+        Samuel Green
+        <div class="chatter-status">
+          Available to Walk
+        </div>
+      </div>
+    </div>
+    <div class="chat-box">
+      <div class="chatter-chat">
+        That sounds great. I’d be happy with that.
+      </div>
+      <div class="chatter-chat">
+        Could you send over some pictures of your dog, please?
+      </div>
+      <div class="user-image">
+        <img src="images/dog-image-1.jpg" style="height: 70px; width:70px; border-radius: 15px; margin: 10px;" />
+        <img src="images/dog-image-2.jpg" style="height: 70px; width:70px; border-radius: 15px; margin: 10px;" />
+        <img src="images/dog-image-3.jpg" style="height: 70px; width:70px; border-radius: 15px; margin: 10px;" />
+      </div>
+      <div class="user-chat">
+        Here are a few pictures. She’s a happy girl!
+
+      </div>
+      <div class="user-chat" id="second-user-chat">
+        Can you make it?
+      </div>
+      <div class="chatter-chat">
+        She looks so happy! The time we discussed works. How long shall I take her out for?
+      </div>
+     <div class="product-description">
+      
+        <input id="radio1" type="radio">
+        <label for="radio1"> 30 minute walk</label>
+        
+        <div class="prices">
+          $29
+        </div>
+        </input>
+      </div>
+      <div class="product-description">
+        
+        <input id="radio2" type="radio">
+        <label for="radio2"> 1 hour walk</label>
+       
+        <div class="prices">
+          $49
+        </div>
+        </input>
+      </div>
+      <button id="user-type-box1" class="user-type-box" >
+        <label for="user-type-box1" >Type a message…</label>
+          <img id="user-submit-button" src="./images/icon-next.svg" style="width: 30px; height: 30px; "/>     
+      </button>
+    </div>
+  </div>
+  <!-- <div class="app-description">
+    Simple booking Stay in touch with our dog walkers through the chat interface. This makes it easy
+    to discuss arrangements and make bookings. Once the walk has been completed you can rate your walker and book again
+    all through the chat.
+  </div> -->
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+
+</html>
